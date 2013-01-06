@@ -1,0 +1,15 @@
+todo-backend/.classpath
+todo-backend/.idea/
+todo-backend/.project
+todo-backend/atlassian-ide-plugin.xml
+todo-backend/soapui/
+todo-backend/target/
+todo-backend/todo-backend-grailsPlugins.iml
+todo-backend/todo-backend.iml
+todo-frontend/.classpath
+todo-frontend/.idea/
+todo-frontend/.project
+todo-frontend/atlassian-ide-plugin.xml
+todo-frontend/target/
+todo-frontend/todo-frontend-grailsPlugins.iml
+todo-frontend/todo-frontend.iml
