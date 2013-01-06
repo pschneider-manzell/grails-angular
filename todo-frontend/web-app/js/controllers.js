@@ -12,7 +12,7 @@ function TodoListCtrl($scope,Todo) {
 
 function TodoDetailCtrl($scope, $routeParams,$location,Todo) {
     $scope.todo = Todo.get({todoId: $routeParams.todoId});
-
+    $scope.deleteSecurityQuestionVisible = false;
 
     $scope.update = function() {
         console.log("Updating todo...");
@@ -25,7 +25,15 @@ function TodoDetailCtrl($scope, $routeParams,$location,Todo) {
         console.log("Deleting todo...");
         var todoId = $scope.todo.id;
         $scope.todo.$delete({'todoId':todoId});
+        $scope.hideDeleteSecurityQuestion();
         console.log("Finished deleting todo "+todoId+"...");
         $location.path('/todos');
     };
+
+    $scope.hideDeleteSecurityQuestion = function(){
+        $scope.deleteSecurityQuestionVisible = false;
+    }
+    $scope.showDeleteSecurityQuestion = function(){
+        $scope.deleteSecurityQuestionVisible = true;
+    }
 }

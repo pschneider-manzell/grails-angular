@@ -16,11 +16,27 @@
                         <input type="checkbox" ng-model="todo.done"> done
                     </label>
                     <button type="button" class="btn" ng-click="update()">Update</button>
-                    <button type="button" class="btn" ng-click="delete()">Delete</button>
+                    <button type="button" class="btn" ng-click="showDeleteSecurityQuestion()">Delete</button>
                 </fieldset>
             </form>
         </div>
     </div>
+
+<div ui-modal class="fade" ng-model="deleteSecurityQuestionVisible" id="deleteSecurityQuestion">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Security question</h3>
+    </div>
+    <div class="modal-body">
+        <p>Do you really want to delete todo <i>{{todo.description}}?</i></p>
+    </div>
+    <div class="modal-footer">
+        <a ng-click="delete();" class="btn btn-primary">Yes</a>
+        <a ng-click="hideDeleteSecurityQuestion();" class="btn">No</a>
+    </div>
+
+
+</div>
 
 </body>
 </html>

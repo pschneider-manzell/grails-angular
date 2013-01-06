@@ -1,4 +1,4 @@
-angular.module('todoapp', ['todoServices']).
+angular.module('todoapp', ['todoServices','ui']).
     config(['$routeProvider', function($routeProvider) {
         $routeProvider.
             when('/todos', {templateUrl: 'todo/list.html',   controller: TodoListCtrl}).
