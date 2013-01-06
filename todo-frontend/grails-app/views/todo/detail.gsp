@@ -3,7 +3,15 @@
     <meta name="layout" content="angular-template"/>
 </head>
 <body>
+<script type="text/javascript">
+    $(function() {
+        updateI18NMap({
+            todoUpdated : '${message(code:'todo.updated').encodeAsHTML()}'
+        });
+    });
 
+
+</script>
 
     <div class="row-fluid">
         <div class="offset2 span8">

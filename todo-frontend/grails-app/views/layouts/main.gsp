@@ -7,9 +7,20 @@
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
     }
     </style>
+    <r:script>
+        var i18nmessages={};
+
+        function updateI18NMap(newI18NMessages) {
+            jQuery.each(newI18NMessages, function(key, val) {
+                i18nmessages[key] = val
+            });
+        }
+
+    </r:script>
     <r:layoutResources/>
 </head>
 <body>
+<div class='notifications bottom-right flashmessage'></div>
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
@@ -29,6 +40,7 @@
         </div>
     </div>
 </div>
+
 <g:layoutBody/>
 <r:layoutResources/>
 </body>
