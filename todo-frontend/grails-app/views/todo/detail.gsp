@@ -15,7 +15,7 @@
                     <label class="checkbox">
                         <input type="checkbox" ng-model="todo.done"> done
                     </label>
-                    <button type="submit" class="btn">Submit</button>
+                    <button type="button" class="btn" ng-click="update()">Update</button>
                 </fieldset>
             </form>
         </div>
