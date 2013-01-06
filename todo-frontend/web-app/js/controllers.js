@@ -13,21 +13,19 @@ function TodoListCtrl($scope,Todo) {
 function TodoDetailCtrl($scope, $routeParams,$location,Todo) {
     $scope.todo = Todo.get({todoId: $routeParams.todoId});
 
-    $scope.testclick = function(){
-     alert("Clicked!");
-    };
 
     $scope.update = function() {
         console.log("Updating todo...");
         $scope.todo.$update();
         console.log("Finished updating todo...")
         $location.path('/todos');
-    }
+    };
 
     $scope.delete = function() {
         console.log("Deleting todo...");
-        $scope.todo.$delete();
-        console.log("Finished deleting todo...")
+        var todoId = $scope.todo.id;
+        $scope.todo.$delete({'todoId':todoId});
+        console.log("Finished deleting todo "+todoId+"...");
         $location.path('/todos');
-    }
+    };
 }
