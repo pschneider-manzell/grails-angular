@@ -6,4 +6,8 @@ package de.psm
 class Todo {
     boolean done
     String description
+
+    static constraints = {
+        description(blank: false)
+    }
 }

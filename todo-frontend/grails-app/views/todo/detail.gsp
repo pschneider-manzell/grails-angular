@@ -6,7 +6,8 @@
 <script type="text/javascript">
     $(function() {
         updateI18NMap({
-            todoUpdated : '${message(code:'todo.updated').encodeAsHTML()}'
+            todoUpdateSuccess : '${message(code:'todo.updated').encodeAsHTML()}',
+            todoUpdateFailed : '${message(code:'todo.update.failed')}'
         });
     });
 
@@ -23,7 +24,8 @@
                     <label class="checkbox">
                         <input type="checkbox" ng-model="todo.done"> done
                     </label>
-                    <button type="button" class="btn" ng-click="update()">Update</button>
+                    <button type="button" class="btn" ng-click="reset()">Reset</button>
+                    <button type="button" class="btn btn-primary" ng-click="update()">Update</button>
                     <button type="button" class="btn" ng-click="showDeleteSecurityQuestion()">Delete</button>
                 </fieldset>
             </form>
