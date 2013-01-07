@@ -18,8 +18,13 @@ modules = {
         resource url:'js/angular-ui/0_3_2/angular-ui.js',disposition: 'head'
     }
 
+    angularauthinterceptor {
+        dependsOn 'angular'
+        resource url:'js/lib/http-auth-interceptor.js',disposition: 'head'
+    }
+
     todoapp {
-        dependsOn 'bootstrap, angularui,bootstrapnotify'
+        dependsOn 'bootstrap, angularui, bootstrapnotify, angularauthinterceptor'
         resource url:'js/services.js',disposition: 'head'
         resource url:'js/controllers.js',disposition: 'head'
         resource url:'js/app.js',disposition: 'head'

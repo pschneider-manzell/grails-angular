@@ -11,6 +11,15 @@ function TodoListCtrl($scope, Todo) {
 }
 
 function TodoDetailCtrl($scope, $routeParams, $location, $locale,Todo) {
+
+    $scope.$on('event:auth-loginRequired', function() {
+        $scope.displayMessage('Login required!','warning');
+        $location.path('/todos');
+    });
+    $scope.$on('event:auth-loginConfirmed', function() {
+        $scope.displayMessage('Logged in!','succes');
+    });
+
     $scope.original= {};
     $scope.todo = Todo.get({todoId: $routeParams.todoId},function(){$scope.original = angular.copy($scope.todo);});
 
