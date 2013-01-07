@@ -9,6 +9,7 @@ class TodoController {
         log.error("Entering list...")
         render Todo.list() as JSON
     }
+    @Secured(['ROLE_USER'])
     def show(Long id) {
         log.error("Entering show...")
         withTodo { todoInstance ->
