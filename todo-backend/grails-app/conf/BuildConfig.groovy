@@ -60,7 +60,8 @@ grails.project.dependency.resolution = {
         runtime ":database-migration:1.2.1"
 
         compile ':cache:1.0.1'
-        compile ":jaxrs:0.6"
+        //compile ":jaxrs:0.6"
+        compile ":spring-security-core:1.2.7.3"
 
         runtime ":cors:1.0.3"
     }

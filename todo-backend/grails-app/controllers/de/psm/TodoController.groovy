@@ -1,6 +1,7 @@
 package de.psm
 
 import grails.converters.JSON
+import grails.plugins.springsecurity.Secured
 
 class TodoController {
 
@@ -8,7 +9,6 @@ class TodoController {
         log.error("Entering list...")
         render Todo.list() as JSON
     }
-
     def show(Long id) {
         log.error("Entering show...")
         withTodo { todoInstance ->

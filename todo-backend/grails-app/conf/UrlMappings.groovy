@@ -7,11 +7,11 @@ class UrlMappings {
 			}
 		}
 
-        "/api2/todo/$id"(controller: "todo", parseRequest: true) {
+        "/api/todo/$id"(controller: "todo", parseRequest: true) {
             action = [GET: "show", PUT: "update", DELETE: "delete", POST: "save"]
         }
 
-        "/api2/todo/"(controller: "todo", parseRequest: true) {
+        "/api/todo/"(controller: "todo", parseRequest: true) {
             action = [GET: "list"]
         }
 
