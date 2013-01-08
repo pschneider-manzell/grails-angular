@@ -25,6 +25,7 @@ modules = {
 
     todoapp {
         dependsOn 'bootstrap, angularui, bootstrapnotify, angularauthinterceptor'
+        resource url:'css/todo.css'
         resource url:'js/services.js',disposition: 'head'
         resource url:'js/controllers.js',disposition: 'head'
         resource url:'js/app.js',disposition: 'head'

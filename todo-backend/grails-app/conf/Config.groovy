@@ -96,3 +96,4 @@ log4j = {
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'de.psm.User'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'de.psm.UserRole'
 grails.plugins.springsecurity.authority.className = 'de.psm.Role'
+grails.plugins.springsecurity.postOnly = false

@@ -20,6 +20,7 @@
     <r:layoutResources/>
 </head>
 <body>
+<g:render template="/security/login"/>
 <div class='notifications bottom-right flashmessage'></div>
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
