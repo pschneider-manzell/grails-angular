@@ -62,7 +62,7 @@ grails.project.dependency.resolution = {
         compile ':cache:1.0.1'
         //compile ":jaxrs:0.6"
         compile ":spring-security-core:1.2.7.3"
+        compile ":twitter-bootstrap:2.2.2"
 
-        runtime ":cors:1.0.3"
     }
 }
