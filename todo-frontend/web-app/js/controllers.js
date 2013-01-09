@@ -103,7 +103,7 @@ function TodoDetailCtrl($scope, $routeParams, $location, $locale,Todo) {
 function LoginCtrl($scope,$http,authService) {
     $scope.submit = function(){
         console.log("Username: "+$scope.username+", password:  "+$scope.password);
-        $http({method:'POST',url:'http://localhost:8080/todo-backend/j_spring_security_check',params:{'j_username':$scope.username,'j_password':$scope.password}}).success(function() {
+        $http({method:'POST',url:'http://localhost:8080/todo-backend/j_spring_security_check',params:{'j_username':$scope.username,'j_password':$scope.password,'ajax':true}}).success(function() {
             authService.loginConfirmed();
         });
     }

@@ -69,6 +69,8 @@ environments {
     }
 }
 
+//grails.serverURL = "http://dev.findbyfriends.com"
+
 // log4j configuration
 log4j = {
     // Example of changing the log pattern for the default console appender:
@@ -97,3 +99,9 @@ grails.plugins.springsecurity.userLookup.userDomainClassName = 'de.psm.User'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'de.psm.UserRole'
 grails.plugins.springsecurity.authority.className = 'de.psm.Role'
 grails.plugins.springsecurity.postOnly = false
+
+//cors.url.pattern = '/api/*'
+cors.allow.origin.regex = 'http://localhost.*'
+cors.headers = [
+        'Access-Control-Allow-Cookies': 'true',
+        'Access-Control-Allow-Credentials':'true']

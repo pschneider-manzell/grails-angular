@@ -8,8 +8,8 @@ modules = {
     }
 
     angular {
-        resource url:'http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.js',disposition: 'head'
-        resource url:'http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-resource.js',disposition: 'head'
+        resource url:'js/lib/angular.js',disposition: 'head'
+        resource url:'js/lib/angular-resource.js',disposition: 'head'
     }
 
     angularui {

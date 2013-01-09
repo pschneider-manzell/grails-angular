@@ -4,5 +4,7 @@ angular.module('todoapp', ['todoServices','ui','http-auth-interceptor']).
             when('/todos', {templateUrl: 'todo/list.html',   controller: TodoListCtrl}).
             when('/todos/:todoId', {templateUrl: 'todo/detail.html', controller: TodoDetailCtrl}).
             otherwise({redirectTo: '/todos'});
-    }]);
+    }]).config(['$httpProvider', function($httpProvider) {
+        $httpProvider.defaults['withCredentials']=true;
+    }]);;
 

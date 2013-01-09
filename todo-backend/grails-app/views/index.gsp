@@ -2,13 +2,13 @@
 <head>
     <meta name="layout" content="main"/>
 
-    <r:require modules="todoapp"/>
+    <r:require modules="application"/>
 
 </head>
 
 <body>
 
-<div class="container" ng-view>
+<div class="container">
 
 </div> <!-- /container -->
 </body>
