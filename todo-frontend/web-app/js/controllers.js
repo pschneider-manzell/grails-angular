@@ -1,5 +1,6 @@
 function TodoListCtrl($scope, Todo) {
-    $scope.todos = Todo.query({}, function () {
+    $scope.orderProp = 'description';
+    $scope.todos = Todo.query({pageSize:50,offset:0,sortOrder:$scope.orderProp,order:'asc'}, function () {
         //good code
     }, function (response, getResponseHeaders) {
         //404 or bad
@@ -7,7 +8,7 @@ function TodoListCtrl($scope, Todo) {
             console.log("Catched status " + response.status)
         }
     });
-    $scope.orderProp = 'description';
+
 }
 
 function TodoDetailCtrl($scope, $routeParams, $location, $locale,Todo) {

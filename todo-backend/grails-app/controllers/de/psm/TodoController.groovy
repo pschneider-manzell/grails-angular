@@ -6,8 +6,16 @@ import grails.plugins.springsecurity.Secured
 class TodoController {
 
     def list() {
+        int pageSize = params.pageSize ?  params.pageSize as int :10
+        if(pageSize>50){
+            pageSize = 50
+        }
+        int offset = params.offset ?  params.offset as int :0
+        String sortOrder = params.sortOrder? params.sortOrder:'description'
+        String order = params.order?params.order :'asc'
+
         log.error("Entering list...")
-        render Todo.list() as JSON
+        render Todo.list(max: pageSize, offset: offset,sort:sortOrder,order:order) as JSON
     }
     @Secured(['ROLE_USER'])
     def show(Long id) {
